@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacia Familiar | Fernanda Kilppe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Apoio jurídico humanizado em direito de família. Dra. Fernanda Kilppe oferece consultoria em divórcio, guarda, pensão, inventário e mais. Agende sua consulta.">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #4a4a4a;
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+        }
+        .text-custom-accent { color: #E9966D; }
+        .bg-custom-accent { background-color: #F4B195; }
+        .bg-custom-accent-dark { background-color: #E9966D; }
+        .text-custom-title { color: #2c3e50; }
+        .border-custom-accent { border-color: #d69e2e; }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .cta-btn-final {
+            background-color: #E9966D;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .cta-btn-final:hover {
+            background-color: #a06e0e;
+        }
+
+        .fixed-whatsapp-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
+        .fixed-whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 177.77%; /* 9/16 aspect ratio para vídeos em portrait */
+        }
+        .video-container video, .video-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5rem;
+        }
+
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-sm py-4 px-6 flex justify-between items-center fixed top-0 left-0 right-0 z-50">
+        <div class="logo-text flex items-center">
+            <img src="nomelogo.png" alt="Logo Fernanda Kilppe Advocacia" class="h-16 max-w-64">
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%20venho%20do%20site%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="hidden md:block btn-whatsapp text-sm">
+            Fale agora pelo WhatsApp
+        </a>
+    </header>
+
+    <main class="pt-20">
+
+        <!-- Seção de Destaque (Hero Section) com Vídeo -->
+        <section class="bg-[#F7F3F0] py-16 md:py-24 px-6">
+            <div class="container mx-auto max-w-4xl grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 text-[#E9966D]">
+                        Apoio Jurídico Humanizado para Momentos Delicados.
+                    </h1>
+                    <p class="text-lg text-gray-700 mb-8 text-justify">
+                        Quando surgem momentos difíceis na família, a incerteza e a preocupação podem ser grandes. Nesses momentos, você não precisa enfrentar tudo sozinho(a). A Dra. Fernanda Kilppe oferece apoio jurídico especializado, protegendo seus direitos e guiando você com segurança. Fale agora com um especialista.
+                    </p>
+                    <a href="#contato" class="cta-btn-final">
+                        Agende sua consulta
+                    </a>
+                </div>
+                <div class="flex justify-center md:justify-end w-full md:w-auto">
+                    <div class="video-container max-w-sm">
+                        <video controls poster="logo.png">
+                            <source src="fernandavdo.mp4" type="video/mp4">
+                            Seu navegador não suporta o elemento de vídeo.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Áreas de Atuação Detalhadas -->
+        <section class="py-16 md:py-24 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-custom-accent">
+                    Atuação especializada para garantir seus direitos             </h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-gavel text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Divórcio e Separação</h3>
+                        <p class="text-gray-600">
+                            Condução de processos de forma ágil e respeitosa.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-child text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Guarda e Pensão Alimentícia</h3>
+                        <p class="text-gray-600">
+                            Apoio jurídico para o bem-estar e direitos dos filhos.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-home text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Partilha de Bens</h3>
+                        <p class="text-gray-600">
+                            Orientações claras para uma divisão justa e equitativa.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-users text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Adoção, Curatela e Interdição</h3>
+                        <p class="text-gray-600">
+                            Aconselhamento e assistência em todo o processo legal.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-user-circle text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Investigação de Paternidade</h3>
+                        <p class="text-gray-600">
+                            Suporte jurídico para o reconhecimento de vínculos familiares.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-scroll text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">Planejamento Sucessório</h3>
+                        <p class="text-gray-600">
+                            Orientações para inventário e testamento, garantindo a vontade da família.
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col items-center text-center">
+                        <i class="fas fa-heart text-4xl text-[#E9966D] mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-custom-title">União Estável e Outros</h3>
+                        <p class="text-gray-600">
+                            Reconhecimento de união estável, alienação parental, testamento vital, e mais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre a Advogada e Diferenciais -->
+        <section class="bg-[#F7F3F0] py-16 md:py-24 px-6">
+            <div class="container mx-auto max-w-4xl grid md:grid-cols-2 gap-12 items-center">
+                <div class="flex justify-center md:justify-start">
+                    <!-- Outra foto da advogada -->
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden shadow-xl">
+                        <img src="fotofernanda.png" alt="Fernanda Kilppe" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-custom-title">
+                        Sua jornada com apoio especializado e humano.
+                    </h2>
+                    <p class="text-gray-700 text-lg mb-6">
+                        A Dra. Fernanda Kilppe lidera nossa equipe, pronta para ouvir suas necessidades e encontrar as soluções mais justas e eficientes. Sua abordagem é sempre humana e sensível, compreendendo que por trás de cada caso há uma história e sentimentos.
+                    </p>
+                    <ul class="text-left text-gray-700 space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-[#E9966D] mr-3"></i> Atendimento humanizado e empático.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-[#E9966D] mr-3"></i> Rapidez e clareza nas orientações jurídicas.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-[#E9966D] mr-3"></i> Foco em soluções amigáveis sempre que possível.</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-[#E9966D] mr-3"></i> Consultoria presencial e online.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prova Social (Depoimentos) -->
+        <section class="py-16 md:py-24 px-6">
+            <div class="container mx-auto max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-custom-title">O que nossos clientes dizem</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <p class="text-gray-600 italic mb-4">"A Dra. Fernanda foi fundamental para me ajudar a passar por um momento tão difícil. Sua orientação clara e sua empatia fizeram toda a diferença."</p>
+                        <p class="font-bold text-[#E9966D]">- Cliente satisfeito</p>
+                    </div>
+                    <div class="bg-gray-100 p-8 rounded-lg shadow-md">
+                        <p class="text-gray-600 italic mb-4">"Recomendo a Dra. Fernanda para quem busca um profissional que entende o lado humano de cada situação. Atendimento impecável e muito seguro."</p>
+                        <p class="font-bold text-[#E9966D]">- Cliente satisfeito</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada para Ação Final (CTA Forte) -->
+        <section id="contato" class="bg-[#F7F3F0] py-16 px-6 text-center">
+            <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-custom-accent">Ainda com dúvidas? Fale agora com um especialista diretamente no WhatsApp</h2>
+                <a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%20venho%20do%20site%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="btn-whatsapp">
+                    Converse com uma advogada
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão de WhatsApp Fixo -->
+    <a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%20venho%20do%20site%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="fixed-whatsapp-btn" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Rodapé -->
+    <footer class="bg-white text-gray-800 py-16 px-6 border-t border-gray-200">
+    <div class="container mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 text-left items-start">
+
+        <div class="flex flex-col items-center md:items-start">
+            <a href="#" aria-label="Página Inicial">
+                <img src="nomelogo.png" alt="Logo Fernanda Kilppe Advocacia" class="h-16 mb-6">
+            </a>
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com/fernanda_kilppe/" class="text-gray-500 hover:text-custom-accent" aria-label="Instagram">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/p/Fernanda-Kilppe-100066570281691/" class="text-gray-500 hover:text-custom-accent" aria-label="Facebook">
+                    <i class="fab fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.youtube.com/@advfernandakilppe" class="text-gray-500 hover:text-custom-accent" aria-label="YouTube">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@advfernandakilppe?" class="text-gray-500 hover:text-custom-accent" aria-label="TikTok">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <h3 class="text-lg font-semibold text-custom-title mb-4">Contatos</h3>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <i class="fab fa-whatsapp mt-1 mr-3 text-custom-accent"></i>
+                    <a href="https://api.whatsapp.com/send?phone=5551999363061" class="hover:text-custom-accent">(51) 99936-3061</a>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-envelope mt-1 mr-3 text-custom-accent"></i>
+                    <a href="mailto:advfernandakilppe@gmail.com" class="hover:text-custom-accent">advfernandakilppe@gmail.com</a>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-map-marker-alt mt-1 mr-3 text-custom-accent"></i>
+                    <span>R. Dr. Barcelos, 2375 - sala 1307 - Centro, Canoas - RS</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="text-center text-gray-500 pt-8 mt-8 border-t border-gray-200 text-sm">
+        <p>Fernanda Kilppe Advocacia | OAB/RS 115249</p>
+        <p>© 2025 Fernanda Kilppe Advocacia. Todos os direitos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>
