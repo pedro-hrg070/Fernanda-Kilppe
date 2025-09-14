@@ -19,28 +19,26 @@
         }
         h1, h2, h3 {
             font-family: 'Lora', serif;
-            color: #2c3e50;
+            color: #E9966D; /* Títulos agora usam a cor salmão */
         }
         .text-custom-accent { color: #E9966D; }
         .bg-custom-accent { background-color: #F4B195; }
         .bg-custom-accent-dark { background-color: #E9966D; }
-        .text-custom-title { color: #2c3e50; }
         .border-custom-accent { border-color: #d69e2e; }
 
         .btn-whatsapp {
-    display: inline-block;
-    background-color: #E9966D; /* Cor de destaque (salmão) */
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.btn-whatsapp:hover {
-    background-color: #d18762; /* Uma versão ligeiramente mais escura para o hover */
-}
+            display: inline-block;
+            background-color: #E9966D;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .btn-whatsapp:hover {
+            background-color: #d18762;
+        }
 
         .cta-btn-final {
             background-color: #E9966D;
@@ -55,24 +53,21 @@
         }
 
         .fixed-whatsapp-btn {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #25D366;
-    color: white;
-    
-    /* Alterações para garantir o formato de círculo perfeito */
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
-    z-index: 50;
-}
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+            z-index: 50;
+        }
         .fixed-whatsapp-btn:hover {
             transform: scale(1.1);
         }
@@ -80,7 +75,7 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-top: 177.77%; /* 9/16 aspect ratio para vídeos em portrait */
+            padding-top: 177.77%;
         }
         .video-container video, .video-container img {
             position: absolute;
@@ -91,30 +86,75 @@
             object-fit: cover;
             border-radius: 0.5rem;
         }
-/* Estilo para o link do menu com a barra superior */
-.menu-link {
-    position: relative;
-    padding-top: 10px; /* Espaço para a barra */
-    padding-bottom: 10px;
-    transition: color 0.3s ease-in-out; /* Transição suave da cor do texto */
-}
+        .menu-link {
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+        .menu-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #E9966D;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .footer-bg-image {
+            background-image: linear-gradient(rgba(138, 94, 75, 0.95), rgba(138, 94, 75, 0.95)), url('escritorio-advocacia.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-link:hover::before {
+            opacity: 1;
+        }
+          /* AJUSTES DE COR PARA O RODAPÉ */
+    #contato h2,
+    #contato h3,
+    #contato span,
+    #contato a {
+        color: #4a4a4a; /* Cor principal do texto do site */
+    }
 
-.menu-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #E9966D; /* Cor salmão */
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.3s ease-in-out; /* Transição suave da opacidade */
-}
+    /* Ajusta a cor dos ícones de contato e redes sociais no rodapé */
+    #contato .fa-map-marker-alt,
+    #contato .fa-whatsapp,
+    #contato .fa-envelope,
+    #contato .fa-instagram,
+    #contato .fa-facebook-f,
+    #contato .fa-youtube,
+    #contato .fa-tiktok {
+        color: #E9966D; /* Cor salmão dos detalhes do site */
+    }
 
-.menu-link:hover::before {
-    opacity: 1; /* Fica visível ao passar o mouse */
-}
+    /* Garante que o link mude de cor ao passar o mouse */
+    #contato a:hover {
+        color: #d18762; /* Um tom de salmão mais escuro */
+    }
+
+    /* Ajusta a cor de fundo dos ícones de redes sociais */
+    #contato .bg-white\/10 {
+        background-color: rgba(0, 0, 0, 0.1); /* Fundo cinza claro para os ícones */
+    }
+    #contato .bg-white\/10:hover {
+        background-color: #E9966D; /* Fundo salmão ao passar o mouse */
+        color: #FFFFFF; /* Ícone fica branco ao passar o mouse */
+    }
+
     </style>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17556651886"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17556651886');
+</script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -124,33 +164,28 @@
         </div>
         <nav class="hidden md:flex justify-center">
             <ul class="flex items-center space-x-12 font-medium">
-                <li class="relative">
-                    <a href="#" class="menu-link text-xl text-custom-title hover:text-custom-accent">Início</a>
-                </li>
-                <li class="relative">
-                    <a href="#atuacao" class="menu-link text-xl text-custom-title hover:text-custom-accent">Atuação</a>
-                </li>
-                <li class="relative">
-                    <a href="#sobre" class="menu-link text-xl text-custom-title hover:text-custom-accent">Sobre</a>
-                </li>
-                <li class="relative">
-                    <a href="#contato" class="menu-link text-xl text-custom-title hover:text-custom-accent">Contato</a>
-                </li>
+                <li class="relative"><a href="#" class="menu-link text-xl text-custom-accent">Início</a></li>
+                <li class="relative"><a href="#atuacao" class="menu-link text-xl text-custom-accent">Atuação</a></li>
+                <li class="relative"><a href="#sobre" class="menu-link text-xl text-custom-accent">Sobre</a></li>
+                <li class="relative"><a href="#contato" class="menu-link text-xl text-custom-accent">Contato</a></li>
             </ul>
         </nav>
-<div class="md:hidden flex items-center">
-    <button id="menu-btn" class="text-custom-title focus:outline-none">
-        <i class="fas fa-bars text-2xl"></i>
-    </button>
-</div>    </header>
-<div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed top-0 left-0 w-full h-full z-40 pt-28">
-    <ul class="flex flex-col items-center justify-center h-full space-y-8">
-        <li><a href="#" class="menu-link-mobile text-2xl text-custom-title hover:text-custom-accent">Início</a></li>
-        <li><a href="#atuacao" class="menu-link-mobile text-2xl text-custom-title hover:text-custom-accent">Atuação</a></li>
-        <li><a href="#sobre" class="menu-link-mobile text-2xl text-custom-title hover:text-custom-accent">Sobre</a></li>
-        <li><a href="#contato" class="menu-link-mobile text-2xl text-custom-title hover:text-custom-accent">Contato</a></li>
-    </ul>
-</div>
+        <div class="md:hidden flex items-center justify-end">
+            <button id="menu-btn" class="text-custom-accent focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg fixed top-0 left-0 w-full h-full z-40 pt-28">
+        <ul class="flex flex-col items-center justify-center h-full space-y-8">
+            <li><a href="#" class="menu-link-mobile text-2xl text-custom-accent">Início</a></li>
+            <li><a href="#atuacao" class="menu-link-mobile text-2xl text-custom-accent">Atuação</a></li>
+            <li><a href="#sobre" class="menu-link-mobile text-2xl text-custom-accent">Sobre</a></li>
+            <li><a href="#contato" class="menu-link-mobile text-2xl text-custom-accent">Contato</a></li>
+        </ul>
+    </div>
+
     <main class="pt-28">
 
         <section class="relative bg-cover bg-center text-white text-center py-32 md:py-48" style="background-image: url('escritorio-advocacia.jpg');">
@@ -168,9 +203,9 @@
             </div>
         </section>
 
-        <section id="faq" class="py-16 md:py-24 px-6">
+        <section id="faq" class="bg-[#F7F3F0] py-16 md:py-24 px-6">
             <div class="container mx-auto max-w-4xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-custom-title">Perguntas Frequentes</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Perguntas Frequentes</h2>
                 <div class="grid md:grid-cols-2 gap-6 text-left">
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"><p class="text-lg font-semibold text-gray-800 mb-4">Quanto tempo demora para um divórcio ser finalizado?</p><a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%2C%20gostaria%20de%20saber%3A%20Quanto%20tempo%20demora%20para%20um%20div%C3%B3rcio%20ser%20finalizado%3F" target="_blank" class="cta-btn-final text-sm w-full text-center block">Ver Resposta no WhatsApp</a></div>
                     <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between"><p class="text-lg font-semibold text-gray-800 mb-4">Como funciona a guarda compartilhada?</p><a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%2C%20gostaria%20de%20saber%3A%20Como%20funciona%20a%20guarda%20compartilhada%3F" target="_blank" class="cta-btn-final text-sm w-full text-center block">Ver Resposta no WhatsApp</a></div>
@@ -183,45 +218,41 @@
         </section>
 
         <section id="atuacao" class="bg-white py-16 md:py-24 px-6">
-    <div class="container mx-auto max-w-5xl">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-
-            <div class="text-left">
-                <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 text-custom-title font-lora">Apoio Jurídico Humanizado</h2>
-                
-                <p class="text-lg text-gray-700 mb-10">
-                    Entendemos que a jornada familiar pode trazer desafios complexos. Em momentos delicados como divórcio, guarda ou inventário, você não precisa passar por isso sem apoio. Nossa atuação é focada em proteger seus direitos e garantir sua tranquilidade, oferecendo orientação jurídica segura e humanizada.
-                </p>
-
-                <h3 class="text-2xl font-bold mb-6 text-custom-title">Nossas Áreas de Atuação:</h3>
-                <ul class="text-left text-gray-700 space-y-3 text-lg">
-                    <li class="flex items-center"><i class="fas fa-gavel text-custom-accent mr-3"></i> Divórcio e Dissolução de União Estável</li>
-                    <li class="flex items-center"><i class="fas fa-child text-custom-accent mr-3"></i> Guarda, Convivência e Pensão Alimentícia</li>
-                    <li class="flex items-center"><i class="fas fa-users text-custom-accent mr-3"></i> Adoção, Curatela e Interdição</li>
-                    <li class="flex items-center"><i class="fas fa-file-signature text-custom-accent mr-3"></i> Inventário judicial e extrajudicial</li>
-                    <li class="flex items-center"><i class="fas fa-heart text-custom-accent mr-3"></i> Reconhecimento de União Estável</li>
-                    <li class="flex items-center"><i class="fas fa-scroll text-custom-accent mr-3"></i> Planejamento Sucessório</li>
-                    <li class="flex items-center"><i class="fas fa-user-check text-custom-accent mr-3"></i> Investigação de Paternidade</li>
-                    <li class="flex items-center"><i class="fas fa-home text-custom-accent mr-3"></i> Partilha de Bens</li>
-                    <li class="flex items-center"><i class="fas fa-balance-scale-right text-custom-accent mr-3"></i> Alienação Parental</li>
-                    <li class="flex items-center"><i class="fas fa-book-medical text-custom-accent mr-3"></i> Testamento Vital e Diretivas de Vontade</li>
-                </ul>
-            </div>
-
-            <div class="flex justify-center">
-                <div class="w-full max-w-sm rounded-lg overflow-hidden shadow-xl">
-                    <div class="video-container">
-                        <video controls poster="crianca.png">
-                            <source src="fernandavdo.mp4" type="video/mp4">
-                            Seu navegador não suporta o elemento de vídeo.
-                        </video>
+            <div class="container mx-auto max-w-5xl">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold leading-tight mb-6 font-lora">Apoio Jurídico Humanizado</h2>
+                        <p class="text-lg text-gray-700 mb-10">
+                            Entendemos que a jornada familiar pode trazer desafios complexos. Em momentos delicados como divórcio, guarda ou inventário, você não precisa passar por isso sem apoio. Nossa atuação é focada em proteger seus direitos e garantir sua tranquilidade, oferecendo orientação jurídica segura e humanizada.
+                        </p>
+                        <h3 class="text-2xl font-bold mb-6">Nossas Áreas de Atuação:</h3>
+                        <ul class="text-left text-gray-700 space-y-3 text-lg">
+                            <li class="flex items-center"><i class="fas fa-gavel text-custom-accent mr-3"></i> Divórcio e Dissolução de União Estável</li>
+                            <li class="flex items-center"><i class="fas fa-child text-custom-accent mr-3"></i> Guarda, Convivência e Pensão Alimentícia</li>
+                            <li class="flex items-center"><i class="fas fa-users text-custom-accent mr-3"></i> Adoção, Curatela e Interdição</li>
+                            <li class="flex items-center"><i class="fas fa-file-signature text-custom-accent mr-3"></i> Inventário judicial e extrajudicial</li>
+                            <li class="flex items-center"><i class="fas fa-heart text-custom-accent mr-3"></i> Reconhecimento de União Estável</li>
+                            <li class="flex items-center"><i class="fas fa-scroll text-custom-accent mr-3"></i> Planejamento Sucessório</li>
+                            <li class="flex items-center"><i class="fas fa-user-check text-custom-accent mr-3"></i> Investigação de Paternidade</li>
+                            <li class="flex items-center"><i class="fas fa-home text-custom-accent mr-3"></i> Partilha de Bens</li>
+                            <li class="flex items-center"><i class="fas fa-balance-scale-right text-custom-accent mr-3"></i> Alienação Parental</li>
+                            <li class="flex items-center"><i class="fas fa-book-medical text-custom-accent mr-3"></i> Testamento Vital e Diretivas de Vontade</li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-full max-w-sm rounded-lg overflow-hidden shadow-xl">
+                            <div class="video-container">
+                                <video controls poster="crianca.png">
+                                    <source src="fernandavdo.mp4" type="video/mp4">
+                                    Seu navegador não suporta o elemento de vídeo.
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </div>
-</section>
+        </section>
+
         <section id="sobre" class="bg-[#F7F3F0] py-16 md:py-24 px-6">
             <div class="container mx-auto max-w-4xl grid md:grid-cols-2 gap-12 items-center">
                 <div class="flex justify-center md:justify-start">
@@ -230,207 +261,211 @@
                     </div>
                 </div>
                 <div class="text-left">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-custom-title">Sua jornada com apoio especializado e humano.</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua jornada com apoio especializado e humano.</h2>
                     <p class="text-gray-700 text-lg">A Dra. Fernanda Kilppe lidera nossa equipe, pronta para ouvir suas necessidades e encontrar as soluções mais justas e eficientes. Sua abordagem é sempre humana e sensível, compreendendo que por trás de cada caso há uma história e sentimentos.</p>
                 </div>
             </div>
         </section>
 
         <section class="bg-white py-16 md:py-24 px-6">
-    <div class="container mx-auto max-w-6xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-custom-title">O que nossos clientes dizem</h2>
-        
-        <div class="swiper testimonials-slider">
-            <div class="swiper-wrapper pb-12">
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/0j3PART/rafaela.jpg" alt="Rafaela Varela">
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Rafaela Varela</p>
-                                <p class="text-sm text-gray-500">06/04/2025</p>
+            <div class="container mx-auto max-w-6xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">O que nossos clientes dizem</h2>
+                <div class="swiper testimonials-slider">
+                    <div class="swiper-wrapper pb-12">
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/0j3PART/rafaela.jpg" alt="Rafaela Varela">
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Rafaela Varela</p>
+                                        <p class="text-sm text-gray-500">06/04/2025</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"Excelência e referência! Escritório com profissionais competentes, capacitados e que me prestaram um serviço sem igual. Recomendo!"</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"Excelência e referência! Escritório com profissionais competentes, capacitados e que me prestaram um serviço sem igual. Recomendo!"</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/bF0DDyB/kety.jpg" alt="Kety Bitelo">
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Kety Bitelo</p>
-                                <p class="text-sm text-gray-500">13/02/2025</p>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/bF0DDyB/kety.jpg" alt="Kety Bitelo">
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Kety Bitelo</p>
+                                        <p class="text-sm text-gray-500">13/02/2025</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"Melhor advogada de canoas Super indico"</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"Melhor advogada de canoas Super indico"</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 rounded-full mr-4 bg-blue-600 flex items-center justify-center text-white text-2xl font-bold">A</div>
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Ani Simone Alves</p>
-                                <p class="text-sm text-gray-500">5 meses atrás</p>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 rounded-full mr-4 bg-blue-600 flex items-center justify-center text-white text-2xl font-bold">A</div>
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Ani Simone Alves</p>
+                                        <p class="text-sm text-gray-500">5 meses atrás</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"Profissional maravilhosa! Muito atenciosa, conseguiu resolver meu problema super rápido! Super recomendo!"</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"Profissional maravilhosa! Muito atenciosa, conseguiu resolver meu problema super rápido! Super recomendo!"</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/x1BqJgM/salette.jpg" alt="Salette Galhardo">
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Salette Galhardo</p>
-                                <p class="text-sm text-gray-500">13/02/2025</p>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/x1BqJgM/salette.jpg" alt="Salette Galhardo">
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Salette Galhardo</p>
+                                        <p class="text-sm text-gray-500">13/02/2025</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"Primeiro: atendimento com excelência, o melhor escritório dentro da Cidade de Canoas, meu pai sempre que precisa procura o escritório dela, ela sempre bem atenciosa, esclarece todas as dúvidas dele e orienta ele da melhor forma, retorno com rapidez, meu pai ganhou 2 processos, sem contar a simpática da Dra Fernanda Kilppe, super recomendo."</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"Primeiro: atendimento com excelência, o melhor escritório dentro da Cidade de Canoas, meu pai sempre que precisa procura o escritório dela, ela sempre bem atenciosa, esclarece todas as dúvidas dele e orienta ele da melhor forma, retorno com rapidez, meu pai ganhou 2 processos, sem contar a simpática da Dra Fernanda Kilppe, super recomendo."</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/dGsmz0r/isadora.jpg" alt="Isadora Anjos">
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Isadora Anjos</p>
-                                <p class="text-sm text-gray-500">um mês atrás</p>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/dGsmz0r/isadora.jpg" alt="Isadora Anjos">
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Isadora Anjos</p>
+                                        <p class="text-sm text-gray-500">um mês atrás</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"A Dra. Fernanda é uma excelente advogada, dedicada, prestativa e muito atenciosa. Sempre fui muito bem atendida por ela. Recomendo com total confiança!"</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"A Dra. Fernanda é uma excelente advogada, dedicada, prestativa e muito atenciosa. Sempre fui muito bem atendida por ela. Recomendo com total confiança!"</p>
-                    </div>
-                </div>
-
-                <div class="swiper-slide h-auto">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
-                        <div class="flex items-center mb-4">
-                            <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/hZ2v6Nn/samara.jpg" alt="Samara Campelo">
-                            <div class="flex-grow">
-                                <p class="font-bold text-custom-title">Samara Campelo</p>
-                                <p class="text-sm text-gray-500">um mês atrás</p>
+                        <div class="swiper-slide h-auto">
+                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-left flex flex-col h-full">
+                                <div class="flex items-center mb-4">
+                                    <img class="w-12 h-12 rounded-full mr-4 object-cover" src="https://i.ibb.co/hZ2v6Nn/samara.jpg" alt="Samara Campelo">
+                                    <div class="flex-grow">
+                                        <p class="font-bold text-custom-accent">Samara Campelo</p>
+                                        <p class="text-sm text-gray-500">um mês atrás</p>
+                                    </div>
+                                    <i class="fab fa-google text-red-500 text-xl"></i>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                                <p class="text-gray-700 italic flex-grow">"Dra. Fernanda é uma excelente profissional! Resolveu meu problema com agilidade, competência e sempre demonstrou muita atenção e disponibilidade. Recomendo com total confiança!"</p>
                             </div>
-                            <i class="fab fa-google text-red-500 text-xl"></i>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i><i class="fas fa-star text-yellow-400"></i>
-                        </div>
-                        <p class="text-gray-700 italic flex-grow">"Dra. Fernanda é uma excelente profissional! Resolveu meu problema com agilidade, competência e sempre demonstrou muita atenção e disponibilidade. Recomendo com total confiança!"</p>
                     </div>
+                    <div class="swiper-pagination mt-8 relative"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-            
-            <div class="swiper-pagination mt-8 relative"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </div>
-</section>
+        </section>
         
     </main>
 
     <a href="https://api.whatsapp.com/send?phone=5551999363061&text=Ol%C3%A1%20venho%20do%20site%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" class="fixed-whatsapp-btn" aria-label="Fale conosco no WhatsApp"><i class="fab fa-whatsapp text-3xl"></i></a>
 
-    <footer id="contato" class="bg-white text-gray-800 py-16 px-6 border-t border-gray-200">
-        <div class="container mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 text-left items-start">
-            <div class="flex flex-col items-center md:items-start">
-                <a href="#" aria-label="Página Inicial"><img src="nomelogo.png" alt="Logo Advocacia" class="h-20 mb-6"></a>
-                <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/fernanda_kilppe/" target="_blank" class="text-custom-accent hover:text-custom-title transition-colors duration-300" aria-label="Instagram"><i class="fab fa-instagram text-2xl"></i></a>
-                    <a href="https://www.facebook.com/p/Fernanda-Kilppe-100066570281691/" target="_blank" class="text-custom-accent hover:text-custom-title transition-colors duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-2xl"></i></a>
-                    <a href="https://www.youtube.com/@advfernandakilppe" target="_blank" class="text-custom-accent hover:text-custom-title transition-colors duration-300" aria-label="YouTube"><i class="fab fa-youtube text-2xl"></i></a>
-                    <a href="https://www.tiktok.com/@advfernandakilppe?" target="_blank" class="text-custom-accent hover:text-custom-title transition-colors duration-300" aria-label="TikTok"><i class="fab fa-tiktok text-2xl"></i></a>
+    <footer id="contato" class="bg-[#F7F3F0] text-white font-light">
+        <div class="container mx-auto max-w-6xl px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <h2 class="text-3xl font-lora font-semibold border-b border-white/20 pb-4">Informações de Contato</h2>
+                    <ul class="space-y-4 text-gray-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt w-6 text-center mt-1 mr-3 text-custom-accent"></i>
+                            <span>R. Dr. Barcelos, 2375 - sala 1307 - Centro, Canoas - RS</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp w-6 text-center mt-1 mr-3 text-custom-accent"></i>
+                            <a href="https://api.whatsapp.com/send?phone=5551999363061" class="hover:text-custom-accent">(51) 99936-3061</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope w-6 text-center mt-1 mr-3 text-custom-accent"></i>
+                            <a href="mailto:advfernandakilppe@gmail.com" class="hover:text-custom-accent">advfernandakilppe@gmail.com</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <h3 class="text-xl font-lora font-semibold mb-4">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.instagram.com/fernanda_kilppe/" target="_blank" aria-label="Instagram" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-custom-accent transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="https://www.facebook.com/p/Fernanda-Kilppe-100066570281691/" target="_blank" aria-label="Facebook" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-custom-accent transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                            <a href="https://www.youtube.com/@advfernandakilppe" target="_blank" aria-label="YouTube" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-custom-accent transition-colors"><i class="fab fa-youtube text-xl"></i></a>
+                            <a href="https://www.tiktok.com/@advfernandakilppe?" target="_blank" aria-label="TikTok" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-custom-accent transition-colors"><i class="fab fa-tiktok text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end items-center">
+                    <img src="nomelogo.png" alt="Logo Fernanda Kilppe Advocacia" class="max-w-xs w-full">
                 </div>
             </div>
-            <div class="w-full">
-                <h3 class="text-lg font-semibold text-custom-title mb-4">Contatos</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start"><i class="fab fa-whatsapp mt-1 mr-3 text-custom-accent"></i><a href="https://api.whatsapp.com/send?phone=5551999363061" class="hover:text-custom-accent">(51) 99936-3061</a></li>
-                    <li class="flex items-start"><i class="fas fa-envelope mt-1 mr-3 text-custom-accent"></i><a href="mailto:advfernandakilppe@gmail.com" class="hover:text-custom-accent">advfernandakilppe@gmail.com</a></li>
-<li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-custom-accent"></i><a href="SEU_LINK_CORRETO_DO_GOOGLE_MAPS_AQUI" target="_blank" class="hover:text-custom-accent">R. Dr. Barcelos, 2375 - sala 1307 - Centro, Canoas - RS</a></li>                </ul>
-            </div>
         </div>
-        <div class="text-center text-gray-500 pt-8 mt-8 border-t border-gray-200 text-sm">
+        <div class="bg-black/20 text-center text-gray-400 py-4 px-6 text-sm">
             <p>Fernanda Kilppe Advocacia | OAB/RS 115249</p>
             <p>© 2025 Fernanda Kilppe Advocacia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    const swiper = new Swiper('.testimonials-slider', {
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 1,
-        breakpoints: {
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 }
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-</script>
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const menuLinks = document.querySelectorAll('.menu-link-mobile');
-    const menuIcon = menuBtn.querySelector('i');
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.testimonials-slider', {
+            loop: true,
+            spaceBetween: 30,
+            slidesPerView: 1,
+            breakpoints: {
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = document.querySelectorAll('.menu-link-mobile');
+        const menuIcon = menuBtn.querySelector('i');
 
-    // Função para fechar o menu
-    function closeMenu() {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.remove('fa-times');
-        menuIcon.classList.add('fa-bars');
-    }
-
-    // Abrir/Fechar com o botão
-    menuBtn.addEventListener('click', () => {
-        const isHidden = mobileMenu.classList.toggle('hidden');
-        if (isHidden) {
+        function closeMenu() {
+            mobileMenu.classList.add('hidden');
             menuIcon.classList.remove('fa-times');
             menuIcon.classList.add('fa-bars');
-        } else {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-times');
         }
-    });
 
-    // Fechar o menu ao clicar em um link
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-</script>
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            if (isHidden) {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            }
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
 </body>
 </html>
